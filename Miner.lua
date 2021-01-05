@@ -123,7 +123,7 @@ function goMine()
         forward()
     end
     
-    turnLeft()
+    turnL()
     
     for i=1,23 do
         forward()
