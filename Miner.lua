@@ -117,7 +117,7 @@ function goMine()
     setLocation()
 
     up()
-    turnRight()
+    turnR()
     
     for i=1,4 do
         forward()
@@ -147,6 +147,10 @@ while true do
         refuel()
     elseif sInput == "goMine" then
         goMine()
+    elseif sInput == "turnL" then
+        turnL()
+    elseif sInput == "turnR" then
+        turnR()
     elseif sInput == "stop" then
         break
     end
