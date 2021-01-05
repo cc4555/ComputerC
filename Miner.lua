@@ -163,6 +163,7 @@ function goMine()
             for i=2,amount do
                 down()
             end
+        end
     end
 end
 
