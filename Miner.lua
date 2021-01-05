@@ -103,6 +103,7 @@ function refuel()
 end
 
 function goMine()
+    print("Going to the Mine")
     getLocation()
 
     up()
