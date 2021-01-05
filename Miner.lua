@@ -2,7 +2,7 @@ local xPos, yPos, zPos = nil
 face = 1
 cal = false
 sInput = nil
-mineX = -1691
+mineX = -1690
 mineY = 11
 mineZ = 4739
 
@@ -127,7 +127,7 @@ function goMine()
 
             turnL()
 
-            amount = zPos + mineZ
+            amount = zPos - mineZ
             print("moving forward " ..amount)
             for i=1,amount do
                 forward()
