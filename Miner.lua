@@ -158,9 +158,8 @@ function goMine()
                 forward()
             end
 
-            amount = yPos - mineY
-            print("moving down " ..amount)
-            for i=2,amount do
+            print("moving down 22 blocks")
+            for i=1,21 do
                 down()
             end
         end
