@@ -107,6 +107,7 @@ function goMine()
     bPosx, bPosy, bPosz = getLocation()
 
     up()
+
     if bPosz ~= mineZ then
         if bPosz > mineZ then
             turnR()
@@ -115,6 +116,7 @@ function goMine()
                 forward()
             end
         end
+    end
 end
 
 while true do
