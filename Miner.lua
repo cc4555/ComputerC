@@ -159,7 +159,7 @@ function goMine()
             end
 
             print("moving down 22 blocks")
-            for i=1,amount do
+            for i=1,22 do
                 down()
             end
         end
