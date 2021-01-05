@@ -21,37 +21,27 @@ function printLocation()
     end
 end
 
-function turnL()
-    print("Turning LefT")
+function turnLeft()
     if face == 0 then
         face = 1
-        turtle.turnLeft()
     elseif face == 1 then
         face = 2
-        turtle.turnLeft()
     elseif face == 2 then
         face = 3
-        turtle.turnLeft()
     elseif face == 3 then
         face = 0
-        turtle.turnLeft()
     end
 end
 
-function turnR()
-    print("Turning Right")
+function turnRight()
     if face == 0 then
         face = 3
-        turtle.turnRight()
     elseif face == 1 then
         face = 0
-        turtle.turnRight()
     elseif face == 2 then
         face = 1
-        turtle.turnRight()
     elseif face == 3 then
         face = 2
-        turtle.turnRight()
     end
 end
 
@@ -114,25 +104,17 @@ end
 
 function goMine()
     print("Going to the Mine")
-    setLocation()
+    bPosx, bPosy, bPosz = getLocation()
 
     up()
-    turnR()
-    
-    for i=1,4 do
-        forward()
-    end
-    
-    turnL()
-    
-    for i=1,28 do
-        forward()
-    end
-    
-    
-    for i=1,21 do
-        down()
-    end
+    if bPosz ~= mineZ then
+        if bPosz > mineZ then
+            turnR()
+            amount = bPosz - mineZ
+            for i=1,amount do
+                forward()
+            end
+        end
 end
 
 while true do
@@ -147,10 +129,6 @@ while true do
         refuel()
     elseif sInput == "goMine" then
         goMine()
-    elseif sInput == "turnL" then
-        turnL()
-    elseif sInput == "turnR" then
-        turnR()
     elseif sInput == "stop" then
         break
     end
