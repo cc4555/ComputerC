@@ -107,7 +107,7 @@ function goMine()
     setLocation()
 
     up()
-    for i=1,29 do
+    for i=1,23 do
         forward()
     end
     turnRight()
