@@ -21,27 +21,35 @@ function printLocation()
     end
 end
 
-function turnLeft()
+function turnL()
     if face == 0 then
         face = 1
+        turtle.turnLeft()
     elseif face == 1 then
         face = 2
+        turtle.turnLeft()
     elseif face == 2 then
         face = 3
+        turtle.turnLeft()
     elseif face == 3 then
         face = 0
+        turtle.turnLeft()
     end
 end
 
-function turnRight()
+function turnR()
     if face == 0 then
         face = 3
+        turtle.turnRight()
     elseif face == 1 then
         face = 0
+        turtle.turnRight()
     elseif face == 2 then
         face = 1
+        turtle.turnRight()
     elseif face == 3 then
         face = 2
+        turtle.turnRight()
     end
 end
 
@@ -109,7 +117,7 @@ function goMine()
 
     if zPos ~= mineZ then
         if zPos > mineZ then
-            turnR()
+            turnRight()
             amount = zPos - mineZ
             for i=1,amount do
                 forward()
