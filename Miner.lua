@@ -115,7 +115,7 @@ function goMine()
     up()
 
     if zPos ~= mineZ then
-        if zPos > mineZ then
+        if zPos > mineZ then --if the turtle is on the left side of the mine
 
             turnR()
 
@@ -139,6 +139,30 @@ function goMine()
                 down()
             end
         end
+
+        if zPos < mineZ then
+
+            turnL()
+
+            amount = mineZ - zPos
+            print("moving forward " ..amount)
+            for i=1,amount do
+                forward()
+            end
+
+            turnR()
+
+            amount = mineZ - zPos
+            print("moving forward " .. amount)
+            for i=-20, amount do
+                forward()
+            end
+
+            amount = yPos - mineY
+            print("moving down " ..amount)
+            for i=2,amount do
+                down()
+            end
     end
 end
 
