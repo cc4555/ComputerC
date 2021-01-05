@@ -104,7 +104,7 @@ end
 
 function goMine()
     print("Going to the Mine")
-    bPosx, bPosy, bPosz = getLocation()
+    bPosx, bPosy, bPosz = setLocation()
 
     up()
 
