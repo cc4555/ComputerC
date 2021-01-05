@@ -125,12 +125,12 @@ function goMine()
     
     turnL()
     
-    for i=1,29 do
+    for i=1,28 do
         forward()
     end
     
     
-    for i=1,22 do
+    for i=1,21 do
         down()
     end
 end
