@@ -104,7 +104,7 @@ end
 
 function goMine()
     print("Going to the Mine")
-    getLocation()
+    setLocation()
 
     up()
     for i=1,29 do
