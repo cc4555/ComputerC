@@ -129,7 +129,7 @@ function goMine()
 
             amount = mineZ - zPos
             print("moving forward " ..amount)
-            for i=-21,amount do
+            for i=-20,amount do
                 forward()
             end
 
