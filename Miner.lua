@@ -124,11 +124,11 @@ while true do
         setLocation()
     elseif sInput == "printLocation" or sInput == "print location" then
         printLocation()
-    elseif sInput == "forward"
+    elseif sInput == "forward" then
         forward()
-    elseif sInput == "refuel"
+    elseif sInput == "refuel" then
         refuel()
-    elseif sInput == "stop"
+    elseif sInput == "stop" then
         break
     end
 end
