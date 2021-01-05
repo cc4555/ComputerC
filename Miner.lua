@@ -135,7 +135,7 @@ function goMine()
 
             amount = yPos -mineY
             print("moving down " ..amount)
-            for i=1,amount do
+            for i=2,amount do
                 down()
             end
         end
