@@ -54,7 +54,6 @@ function turnR()
 end
 
 function forward()
-    print("Turtle moving forward")
     turtle.forward()
     if cal == true then
      if face == 0 then
