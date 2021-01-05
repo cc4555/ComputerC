@@ -22,6 +22,7 @@ function printLocation()
 end
 
 function turnLeft()
+    print("Turning LefT")
     if face == 0 then
         face = 1
         turtle.turnLeft()
@@ -38,6 +39,7 @@ function turnLeft()
 end
 
 function turnRight()
+    print("Turning Right")
     if face == 0 then
         face = 3
         turtle.turnRight()
