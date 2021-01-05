@@ -104,16 +104,13 @@ end
 
 function goMine()
     print("Going to the Mine")
-    bPosx, bPosy, bPosz = setLocation()
-
-    print(bPosz)
 
     up()
 
-    if bPosz ~= mineZ then
-        if bPosz > mineZ then
+    if zPos ~= mineZ then
+        if zPos > mineZ then
             turnR()
-            amount = bPosz - mineZ
+            amount = zPos - mineZ
             for i=1,amount do
                 forward()
             end
