@@ -21,7 +21,7 @@ function printLocation()
     end
 end
 
-function turnLeft()
+function turnL()
     print("Turning LefT")
     if face == 0 then
         face = 1
@@ -38,7 +38,7 @@ function turnLeft()
     end
 end
 
-function turnRight()
+function turnR()
     print("Turning Right")
     if face == 0 then
         face = 3
