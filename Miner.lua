@@ -106,6 +106,8 @@ function goMine()
     print("Going to the Mine")
     bPosx, bPosy, bPosz = setLocation()
 
+    print(bPosz)
+
     up()
 
     if bPosz ~= mineZ then
