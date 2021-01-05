@@ -117,7 +117,7 @@ function goMine()
 
     if zPos ~= mineZ then
         if zPos > mineZ then
-            turnRight()
+            turnR()
             amount = zPos - mineZ
             for i=1,amount do
                 forward()
