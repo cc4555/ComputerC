@@ -115,7 +115,7 @@ function goMine()
     
     turnLeft()
     
-    for i=1,22 do
+    for i=1,23 do
         forward()
     end
     
