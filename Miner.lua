@@ -24,24 +24,32 @@ end
 function turnLeft()
     if face == 0 then
         face = 1
+        turtle.turnLeft()
     elseif face == 1 then
         face = 2
+        turtle.turnLeft()
     elseif face == 2 then
         face = 3
+        turtle.turnLeft()
     elseif face == 3 then
         face = 0
+        turtle.turnLeft()
     end
 end
 
 function turnRight()
     if face == 0 then
         face = 3
+        turtle.turnRight()
     elseif face == 1 then
         face = 0
+        turtle.turnRight()
     elseif face == 2 then
         face = 1
+        turtle.turnRight()
     elseif face == 3 then
         face = 2
+        turtle.turnRight()
     end
 end
 
