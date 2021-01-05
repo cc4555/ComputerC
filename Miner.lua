@@ -117,10 +117,27 @@ function goMine()
 
     if zPos ~= mineZ then
         if zPos > mineZ then
+
             turnR()
+
             amount = zPos - mineZ
+            print("moving forward " ..amount)
             for i=1,amount do
                 forward()
+            end
+
+            turnL()
+
+            amount = zPos + mineZ
+            print("moving forward " ..amount)
+            for i=1,amount do
+                forward()
+            end
+
+            amount = yPos -mineY
+            print("moving down " ..amount)
+            for i=1,amount do
+                down()
             end
         end
     end
