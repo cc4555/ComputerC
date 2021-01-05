@@ -128,6 +128,8 @@ while true do
         forward()
     elseif sInput == "refuel" then
         refuel()
+    elseif sInput == "goMine" then
+        goMine()
     elseif sInput == "stop" then
         break
     end
