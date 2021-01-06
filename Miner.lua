@@ -6,6 +6,11 @@ mineX = -1690
 mineY = 11
 mineZ = 4739
 
+leftOffX = nil
+leftOffY = nil
+leftOffZ = nil
+
+
 function setLocation()
     print("Getting location")
     xPos, yPos, zPos = gps.locate()
@@ -239,7 +244,7 @@ end
 
 function goBack()
     setLocation()
-    leftOff = xPos
+    leftOffX = xPos
     turnR()
     turnR()
     if xPos ~= mineX then
@@ -258,9 +263,16 @@ function goBack()
 
     turnL()
 
-    for i=0,18 do
+    for i=0,20 do
         forward()
     end
+
+    for i=0,16 do
+        turtle.dropDown(i)
+    end
+
+    turnR()
+    turnR()
 
 end
 
