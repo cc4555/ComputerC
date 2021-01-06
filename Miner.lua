@@ -242,10 +242,10 @@ function goBack()
     leftOff = xPos
     turnR()
     turnR()
-    amount = leftOff + xPos 
-    print(amount)
-    for i=0,amount - amount - amount do
-        forward()
+    if xPos ~= mineX then
+        while xPos ~= mineX do
+            forward()
+        end
     end
 end
 
