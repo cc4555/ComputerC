@@ -248,7 +248,7 @@ function goBack()
         end
     end
     
-    for i=0,23 do
+    for i=0,20 do
         up()
     end
 
