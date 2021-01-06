@@ -229,8 +229,6 @@ function invCheck()
         itemName = turtle.getItemDetail()
         itemCount = turtle.getItemCount()
 
-        print("Slot ".. i .. "item " .. itemName .. " " .. itemCount)
-
         if turtle.getItemSpace(16) then
             if turtle.getItemCount() == 64 then
                 goBack()
