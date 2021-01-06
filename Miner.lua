@@ -141,8 +141,9 @@ function goMine()
             setLocation()
 
             if yPos ~= mineY then
-                while yPos ~= mineY do
+                while yPos == mineY do
                     down()
+                    print(yPos)
                 end
             end
         end
