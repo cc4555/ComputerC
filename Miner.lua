@@ -258,7 +258,7 @@ function goBack()
 
     turnL()
 
-    for i=0,20 do
+    for i=0,18 do
         forward()
     end
 
