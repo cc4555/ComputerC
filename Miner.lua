@@ -3,7 +3,7 @@ face = 1
 cal = false
 sInput = nil
 mineX = -1690
-mineY = 11
+mineY = 12
 mineZ = 4739
 
 leftOffX = nil
@@ -140,8 +140,8 @@ function goMine()
 
             setLocation()
 
-            if yPos ~= mineY+1 then
-                while yPos ~= mineY+1 do
+            if yPos ~= mineY then
+                while yPos ~= mineY do
                     down()
                 end
             end
@@ -167,8 +167,8 @@ function goMine()
 
             setLocation()
 
-            if yPos ~= mineY+1 then
-                while yPos ~= mineY+1 do
+            if yPos ~= mineY then
+                while yPos ~= mineY do
                     down()
                 end
             end
