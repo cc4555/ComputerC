@@ -140,8 +140,8 @@ function goMine()
 
             setLocation()
 
-            if yPos ~= mineY then
-                while yPos ~= mineY do
+            if yPos ~= mineY+1 then
+                while yPos ~= mineY+1 do
                     down()
                 end
             end
@@ -167,8 +167,8 @@ function goMine()
 
             setLocation()
 
-            if yPos ~= mineY then
-                while yPos ~= mineY do
+            if yPos ~= mineY+1 then
+                while yPos ~= mineY+1 do
                     down()
                 end
             end
