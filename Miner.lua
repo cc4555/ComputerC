@@ -273,8 +273,11 @@ function goBack()
         forward()
     end
 
-    for i=0,16 do
-        turtle.dropDown(i)
+    for i=1,16 do
+        turtle.getSelectedSlot(i)
+        for i=1,64 do
+            turtle.dropDown()
+        end
     end
 
     turnR()
