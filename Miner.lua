@@ -267,7 +267,7 @@ while true do
     elseif sInput == "invCheck" then
         invCheck()
     elseif sInput == "goBack" then
-        goback()
+        goBack()
     elseif sInput == "stop" then
         break
     end
