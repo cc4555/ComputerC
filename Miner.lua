@@ -189,6 +189,11 @@ function mine(length)
         turtle.digDown()
         turnL()
         turtle.dig()
+        if turtle.detect() then
+            while turtle.detect() == true do
+                turtle.dig()
+            end
+        end
         forward()
         turtle.digDown()
         turtle.digUp()
@@ -197,6 +202,11 @@ function mine(length)
         forward()
         forward()
         turtle.dig()
+        if turtle.detect() then
+            while turtle.detect() == true do
+                turtle.dig()
+            end
+        end
         forward()
         turtle.digDown()
         turtle.digUp()
