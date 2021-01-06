@@ -163,7 +163,7 @@ function goMine()
                 down()
             end
 
-            xPos, yPos, zPos = setLocation()
+            xPos, yPos, zPos = gps.locate()
         end
     end
 end
