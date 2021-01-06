@@ -266,6 +266,8 @@ while true do
         mine(sInput)
     elseif sInput == "invCheck" then
         invCheck()
+    elseif sInput == "goBack" then
+        goback()
     elseif sInput == "stop" then
         break
     end
