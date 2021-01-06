@@ -169,23 +169,23 @@ function goMine()
 end
 
 function mine() 
-    turtle.dig
+    turtle.dig()
     forward()
-    turtle.digUp
-    turtle.digDown
+    turtle.digUp()
+    turtle.digDown()
     turnL()
-    turtle.dig
+    turtle.dig()
     forward()
-    turtle.digDown
-    tutle.digUp
+    turtle.digDown()
+    tutle.digUp()
     turnR()
     turnR()
     forward()
     forward()
-    turtle.dig
+    turtle.dig()
     forward()
-    turtle.digDown
-    turtle.digUp
+    turtle.digDown()
+    turtle.digUp()
 end
 
 while true do
