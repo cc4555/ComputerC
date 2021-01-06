@@ -165,32 +165,40 @@ function goMine()
 
             xPos, yPos, zPos = gps.locate()
         end
+
+        while true do
+            mine()
+            if turtle.
+        end
+
     end
 end
 
-function mine() 
-    turtle.dig()
-    forward()
-    turtle.digUp()
-    turtle.digDown()
-    turnL()
-    turtle.dig()
-    forward()
-    turtle.digDown()
-    turtle.digUp()
-    turnR()
-    turnR()
-    forward()
-    forward()
-    turtle.dig()
-    forward()
-    turtle.digDown()
-    turtle.digUp()
-    turnL()
-    turnL()
-    forward()
-    turnR()
-    xPos = xPos + 1
+function mine(number length) 
+    for i=0,length do
+        turtle.dig()
+        forward()
+        turtle.digUp()
+        turtle.digDown()
+        turnL()
+        turtle.dig()
+        forward()
+        turtle.digDown()
+        turtle.digUp()
+        turnR()
+        turnR()
+        forward()
+        forward()
+        turtle.dig()
+        forward()
+        turtle.digDown()
+        turtle.digUp()
+        turnL()
+        turnL()
+        forward()
+        turnR()
+        xPos = xPos + 1
+    end
 end
 
 while true do
@@ -206,7 +214,8 @@ while true do
     elseif sInput == "goMine" then
         goMine()
     elseif sInput == "mine" then
-        mine()
+        sInput = tonumber(read())
+        mine(sInput)
     elseif sInput == "stop" then
         break
     end
