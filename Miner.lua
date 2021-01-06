@@ -247,6 +247,21 @@ function goBack()
             forward()
         end
     end
+    
+    for i=0,23 do
+        up()
+    end
+
+    for i=0,18 do
+        forward()
+    end
+
+    turnL()
+
+    for i=0,20 do
+        forward()
+    end
+
 end
 
 while true do
