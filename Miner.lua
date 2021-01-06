@@ -242,9 +242,9 @@ function goBack()
     leftOff = xPos
     turnR()
     turnR()
-    amount = xPos - leftOff 
+    amount = leftOff + xPos 
     print(amount)
-    for i=0,amount do
+    for i=0,amount - amount - amount do
         forward()
     end
 end
