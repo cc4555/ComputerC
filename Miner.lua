@@ -224,7 +224,7 @@ function mine(length)
 end
 
 function invCheck()
-    for i=0,15 do
+    for i=1,16 do
         turtle.getItemSpace(i)
         itemName = turtle.getItemDetail()
         itemCount = turtle.getItemCount()
