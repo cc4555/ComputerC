@@ -216,7 +216,6 @@ function mine(length)
         turnR()
         turnR()
         forward()
-        forward()
 
         turtle.dig()
         if turtle.detect() then
