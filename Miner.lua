@@ -140,7 +140,7 @@ function goMine()
             end
         end
 
-        if zPos < mineZ then
+        if zPos < mineZ then --if the turtle is on the right side of the mine
 
             turnL()
 
@@ -159,11 +159,33 @@ function goMine()
             end
 
             print("moving down 22 blocks")
-            for i=1,22 do
+            for i=1,21 do
                 down()
             end
+
+            xPos, yPos, zPos = setLocation()
         end
     end
+end
+
+function mine() 
+    turtle.dig
+    forward()
+    turtle.digUp
+    turtle.digDown
+    turnL()
+    turtle.dig
+    forward()
+    turtle.digDown
+    tutle.digUp
+    turnR()
+    turnR()
+    forward()
+    forward()
+    turtle.dig
+    forward()
+    turtle.digDown
+    turtle.digUp
 end
 
 while true do
