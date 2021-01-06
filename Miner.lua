@@ -200,6 +200,8 @@ while true do
         refuel()
     elseif sInput == "goMine" then
         goMine()
+    elseif sInput == "mine" then
+        mine()
     elseif sInput == "stop" then
         break
     end
