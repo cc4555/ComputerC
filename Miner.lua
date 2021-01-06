@@ -176,7 +176,7 @@ function goMine()
     end
 end
 
-function mine(number length) 
+function mine(length)
     for i=0,length do
         turtle.dig()
         forward()
