@@ -178,22 +178,26 @@ end
 
 function mine(length)
     for i=0,length do
+
         turtle.dig()
         if turtle.detect() then
             while turtle.detect() == true do
                 turtle.dig()
             end
         end
+
         forward()
         turtle.digUp()
         turtle.digDown()
         turnL()
+
         turtle.dig()
         if turtle.detect() then
             while turtle.detect() == true do
                 turtle.dig()
             end
         end
+
         forward()
         turtle.digDown()
         turtle.digUp()
@@ -201,6 +205,7 @@ function mine(length)
         turnR()
         forward()
         forward()
+
         turtle.dig()
         if turtle.detect() then
             while turtle.detect() == true do
@@ -215,6 +220,34 @@ function mine(length)
         forward()
         turnR()
         xPos = xPos + 1
+    end
+end
+
+function invCheck()
+    for i=0,15 do
+        turtle.getItemSpace(i)
+        itemName = turtle.getItemDetail()
+        itemCount = turtle.getItemCount()
+
+        print("Slot ".. i .. "item " .. itemName .. " " .. itemCount)
+
+        if turtle.getItemSpace(16) then
+            if turtle.getItemCount() == 64 then
+                goBack()
+            end
+        end
+    end
+end
+
+function goBack()
+    setLocation()
+    leftOff = xPos
+    turnR()
+    turnR()
+    amount = leftOff + xPos
+    print(amount)
+    for i=0,amount do
+        forward()
     end
 end
 
@@ -233,6 +266,8 @@ while true do
     elseif sInput == "mine" then
         sInput = tonumber(read())
         mine(sInput)
+    elseif sInput == "invCheck" then
+        invCheck()
     elseif sInput == "stop" then
         break
     end
