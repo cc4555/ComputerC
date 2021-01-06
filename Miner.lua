@@ -186,6 +186,9 @@ function mine()
     forward()
     turtle.digDown()
     turtle.digUp()
+    turnL()
+    forward()
+    xPos = xPos + 1
 end
 
 while true do
