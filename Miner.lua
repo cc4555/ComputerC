@@ -179,6 +179,10 @@ function goMine()
 
         turnR()
 
+        for i=0,5 do
+            forward()
+        end
+
         mine(5)
 
     end
