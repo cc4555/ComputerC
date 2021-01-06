@@ -179,6 +179,11 @@ end
 function mine(length)
     for i=0,length do
         turtle.dig()
+        if turtle.detect() then
+            while turtle.detect() == true do
+                turtle.dig()
+            end
+        end
         forward()
         turtle.digUp()
         turtle.digDown()
