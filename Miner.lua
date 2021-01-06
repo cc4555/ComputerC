@@ -138,10 +138,12 @@ function goMine()
                 forward()
             end
 
-            amount = yPos -mineY
-            print("moving down " ..amount)
-            for i=2,amount do
-                down()
+            setLocation()
+
+            if yPos ~= mineY then
+                while yPos ~= mineY do
+                    down()
+                end
             end
         end
 
@@ -163,20 +165,20 @@ function goMine()
                 forward()
             end
 
-            print("moving down 22 blocks")
-            for i=1,21 do
-                down()
+            setLocation()
+
+            if yPos ~= mineY then
+                while yPos ~= mineY do
+                    down()
+                end
             end
 
             xPos, yPos, zPos = gps.locate()
         end
 
-        while true do
-            mine()
-            if turtle.getFuelLevel == 0 then
-                refuel()
-            end
-        end
+        turnR()
+
+        mine(5)
 
     end
 end
