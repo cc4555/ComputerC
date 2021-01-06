@@ -168,7 +168,9 @@ function goMine()
 
         while true do
             mine()
-            if turtle.
+            if turtle.getFuelLevel == 0 then
+                refuel()
+            end
         end
 
     end
