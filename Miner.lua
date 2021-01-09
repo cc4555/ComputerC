@@ -116,6 +116,7 @@ function goMine()
             print(zPos)
             if zPos == mineZ then
                 break
+            end
         end
         
         setLocation()
