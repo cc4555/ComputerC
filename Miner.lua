@@ -119,6 +119,7 @@ function down()
         print("Calibrating")
         setLocation()
     end
+end
 
 function goMine()
     print("Going to the mine.")
