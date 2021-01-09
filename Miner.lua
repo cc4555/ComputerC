@@ -147,6 +147,11 @@ function goMine()
         for i=1, amount do
             forward()
         end
+
+        amount = yPos - mineY
+        for i=1, amount do
+            down()
+        end
         
     end
 end
