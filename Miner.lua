@@ -6,7 +6,7 @@ mineX = -1690
 mineY = 12
 mineZ = 4739
 
-local cPosX = -1750
+local cPosX = -1751
 
 leftOffX = nil
 leftOffY = nil
@@ -126,6 +126,39 @@ end
 function continue()
 end
 
+function mine()
+    turtle.dig
+    if turtle.detect == true then
+        while turtle.detect == true do
+            turtle.dig
+        end
+    end
+    foward()
+    turtle.digUp
+    turtle.digDown
+    turnR()
+    turtle.dig
+    if turtle.detect == true then
+        while turtle.detect == true do
+            turtle.dig
+        end
+    end
+    turtle.digUp
+    turtle.digDown
+    turnL()
+    turnL()
+    foward()
+    forward()
+    turtle.dig
+    if turtle.detect == true then
+        while turtle.detect == true do
+            turtle.dig
+        end
+    end
+    turtle.digUp
+    turtle.digDown
+end
+
 
 function goMine()
     print("Going to the mine.")
@@ -164,6 +197,10 @@ function goMine()
         amount = xPos - cPosX
         for i=1, amount do
             forward()
+        end
+
+        for i=1, 10 do
+            mine()
         end
 
     end
