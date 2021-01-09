@@ -111,7 +111,7 @@ function goMine()
 
     if zPos ~= mineZ then
         turnR()
-        while zPos ~= mineZ do
+        while zPos == mineZ do
             forward()
             pos()
         end
