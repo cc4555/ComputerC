@@ -224,40 +224,7 @@ function goMine()
 
         print("Which side of the mine are you going into id#"..id)
         setLocation()
-        if id == 1 then
-            print("Side 1")
-            amount = xPos - cPosX
-            for i=1, amount do
-                forward()
-            end
-
-            for i=1, 10 do
-                mine()
-            end
-        elseif id == 2 then
-            print("Side 2")
-            turnR()
-            amount = zPos - cPosZ
-            for i=1, amount do
-                forward()
-            end
-
-            for i=1, 10 do
-                mine()
-            end
-        elseif id == 3 then
-            print("Side 3")
-            turnR()
-            turnR()
-            amount = xPos + cPosX
-            for i=1, amount do
-                forward()
-            end
-
-            for i=1, 10 do
-                mine()
-            end
-        elseif id == 4 then
+        if id == 4 then
             print("Side 4")
             turnL()
             amount = cPosZ - zPos
