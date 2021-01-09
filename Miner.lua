@@ -126,6 +126,11 @@ function goMine()
         while zPos ~= mineZ do
             forward()
             print(zPos)
+            
+            if zPos == mineZ then
+                break
+            end
+
         end
         
         setLocation()
