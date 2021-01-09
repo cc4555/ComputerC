@@ -75,6 +75,8 @@ function forward()
         end
     else
         print("Not Calibrated.")
+        print("Calibrating")
+        setLocation()
     end
 end
 
@@ -91,7 +93,9 @@ function back()
             xPos = xPos - 1
         end
     else
-        print("Not Calibrated")
+        print("Not Calibrated.")
+        print("Calibrating")
+        setLocation()
     end
 end
 
@@ -100,12 +104,20 @@ function up()
     if cal == true then
         yPos = yPos + 1
     else
-        print("Not Calibrated")
+        print("Not Calibrated.")
+        print("Calibrating")
+        setLocation()
     end
 end
 
 function goMine()
     print("Going to the mine.")
+
+    if cal == false then
+        print("Not Calibrated.")
+        print("Calibrating")
+        setLocation()
+    end
 
     up()
 
@@ -114,9 +126,6 @@ function goMine()
         while zPos ~= mineZ do
             forward()
             print(zPos)
-            if zPos == mineZ then
-                break
-            end
         end
         
         setLocation()
