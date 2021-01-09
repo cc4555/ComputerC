@@ -222,7 +222,7 @@ function goMine()
             down()
         end
 
-        print("Which side of the mine are you going into")
+        print("Which side of the mine are you going into id#"..id)
         setLocation()
         if id == 1 then
             print("Side 1")
