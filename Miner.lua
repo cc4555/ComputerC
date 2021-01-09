@@ -15,6 +15,8 @@ leftOffX = nil
 leftOffY = nil
 leftOffZ = nil
 
+rednet.open()
+
 function calibrate()
     print("What is the ID of this turtle?")
     id = read()
@@ -138,6 +140,9 @@ function mine()
     turtle.digDown()
     turnR()
     turtle.dig()
+    while turtle.detect() do
+        turtle.dig()
+    end
     forward()
     turtle.digUp()
     turtle.digDown()
@@ -145,6 +150,9 @@ function mine()
     turnL()
     forward()
     turtle.dig()
+    while turtle.detect() do
+        turtle.dig()
+    end
     forward()
     turtle.digUp()
     turtle.digDown()
