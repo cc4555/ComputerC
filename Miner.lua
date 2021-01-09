@@ -9,7 +9,7 @@ mineZ = 4739
 local cPosX = -1755
 local cPosZ = 4752
 
-local id = 1
+local id = nil
 
 leftOffX = nil
 leftOffY = nil
@@ -18,7 +18,7 @@ leftOffZ = nil
 function calibrate()
     print("What is the ID of this turtle?")
     id = read()
-    print("Calibrating")
+    print("Calibrating to id "..id)
     xPos, yPos, zPos = gps.locate()
     print("Finished")
     cal = true
