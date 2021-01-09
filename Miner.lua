@@ -22,7 +22,7 @@ function setLocation()
 end
 
 function pos()
-    print("X:" ..xPos.. "Y:" ..yPos.. "Z:" ..zPos)
+    print("X:" ..xPos.. "  Y:" ..yPos.. "  Z:" ..zPos)
 end
 
 function facing()
@@ -82,11 +82,11 @@ function back()
     turtle.back()
     if cal == true then
         if face == 0 then
-            zPos = zPos + 1
+            zPos = zPos - 1
         elseif face == 1 then
             xPos = xPos + 1
         elseif face == 2 then
-            zPos = zPos - 1
+            zPos = zPos + 1
         elseif face == 3 then
             xPos = xPos - 1
         end
