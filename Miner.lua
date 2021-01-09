@@ -21,6 +21,10 @@ function setLocation()
     xPos, yPos, zPos = gps.locate()
 end
 
+function pos()
+    print("X:" ..xPos.. "Y:" ..yPos.. "Z:" ..zPos)
+end
+
 function facing()
     print("your facing" ..face)
 end
@@ -145,5 +149,7 @@ while true do
         forward()
     elseif sInput == "back" then
         back()
+    elseif sInput == "pos" then
+        pos()
     end
 end
