@@ -148,12 +148,6 @@ function goMine()
             forward()
         end
         
-        setLocation()
-
-        amount = yPos - mineY
-        for i=0, amount do
-            down()
-        end
     end
 end
 
