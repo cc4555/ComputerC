@@ -113,6 +113,7 @@ function goMine()
         turnR()
         while zPos ~= mineZ do
             forward()
+            pos()
         end
         
         setLocation()
