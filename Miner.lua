@@ -21,6 +21,10 @@ function setLocation()
     xPos, yPos, zPos = gps.locate()
 end
 
+function face()
+    print(face)
+end
+
 function turnL()
     if face == 0 then
         face = 1
@@ -129,5 +133,7 @@ while true do
         calibrate()
     elseif sInput == "goMine" then
         goMine()
+    elseif sInput == "face" then
+        face()
     end
 end
