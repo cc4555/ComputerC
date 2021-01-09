@@ -137,9 +137,6 @@ function mine()
     turnR()
     turtle.dig()
     forward()
-    while turtle.detect() do
-        turtle.dig()
-    end
     turtle.digUp()
     turtle.digDown()
     turnL()
@@ -147,11 +144,6 @@ function mine()
     forward()
     turtle.dig()
     forward()
-    turtle.dig()
-    while turtle.detect() do
-        turtle.dig()
-    end
-
     turtle.digUp()
     turtle.digDown()
 end
