@@ -218,7 +218,7 @@ function goMine()
         end
 
         setLocation()
-        if id = 1 then
+        if id == 1 then
             amount = xPos - cPosX
             for i=1, amount do
                 forward()
@@ -227,7 +227,7 @@ function goMine()
             for i=1, 10 do
                 mine()
             end
-        elseif id = 2 then
+        elseif id == 2 then
             turnR()
             amount = zPos - cPosZ
             for i=1, amount do
@@ -237,7 +237,7 @@ function goMine()
             for i=1, 10 do
                 mine()
             end
-        elseif id = 3 then
+        elseif id == 3 then
             turnR()
             turnR()
             amount = xPos + cPosX
@@ -248,7 +248,7 @@ function goMine()
             for i=1, 10 do
                 mine()
             end
-        elseif id = 4 then
+        elseif id == 4 then
             turnL()
             amount = cPosZ - zPos
             for i=1, amount do
