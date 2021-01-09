@@ -135,7 +135,7 @@ function goMine()
     if zPos ~= mineZ then
         turnR()
         amount = zPos - mineZ
-        for i=0, amount do
+        for i=0, amount-1 do
             forward()
             print(zPos)
         end
