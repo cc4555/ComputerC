@@ -259,6 +259,7 @@ function goMine()
             end
         elseif id == "4" then -- if the id is 4
             print("Side 4")
+            turnL()
             amount = cPosZ - zPos
             for i=1, amount do
                 forward()
