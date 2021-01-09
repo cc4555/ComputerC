@@ -22,7 +22,7 @@ function setLocation()
 end
 
 function face()
-    print(face)
+    print("your facing" ..face)
 end
 
 function turnL()
