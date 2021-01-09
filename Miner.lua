@@ -164,7 +164,7 @@ function goMine()
 
     up()
 
-    if zPos ~= mineZ && zPos > mineZ then
+    if zPos > mineZ then
         turnR()
         amount = zPos - mineZ
         for i=1, amount do
@@ -198,7 +198,7 @@ function goMine()
 
     end
 
-    if zPos ~= mineZ && zPos < mineZ then
+    if zPos < mineZ then
         turnL()
         amount = zPos - mineZ
         for i=1, amount do
