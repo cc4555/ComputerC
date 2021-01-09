@@ -13,6 +13,9 @@ leftOffY = nil
 leftOffZ = nil
 
 function calibrate()
+    print("What is the ID of this turtle?")
+    sInput = read()
+    id = sInput
     print("Calibrating")
     xPos, yPos, zPos = gps.locate()
     print("Finished")
@@ -123,9 +126,6 @@ function down()
     end
 end
 
-function continue()
-end
-
 function mine()
     turtle.dig()
     while turtle.detect() do
@@ -164,7 +164,7 @@ function goMine()
 
     up()
 
-    if zPos ~= mineZ then
+    if zPos ~= mineZ && zPos > mineZ then
         turnR()
         amount = zPos - mineZ
         for i=1, amount do
@@ -197,6 +197,35 @@ function goMine()
         end
 
     end
+
+    if zPos ~= mineZ && zPos < mineZ then
+        turnL()
+        amount = zPos - mineZ
+        for i=1, amount do
+            forward()
+        end
+
+        setLocation()
+        turnR()
+        amount = xPos - mineX
+        for i=1, amount do
+            forward()
+        end
+
+        amount = yPos - mineY
+        for i=1, amount-1 do
+            down()
+        end
+
+        setLocation()
+        amount = xPos - cPosX
+        for i=1, amount do
+            forward()
+        end
+
+        for i=1, 10 do
+            mine()
+        end
 end
 
 while true do
