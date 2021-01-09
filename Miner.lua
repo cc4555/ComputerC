@@ -226,6 +226,7 @@ function goMine()
         for i=1, 10 do
             mine()
         end
+    end
 end
 
 while true do
