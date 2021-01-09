@@ -121,3 +121,13 @@ function goMine()
         end
     end
 end
+
+while true do
+    sInput = read()
+
+    if sInput == "calibrate" then
+        calibrate()
+    elseif sInput == "goMine" then
+        goMine()
+    end
+end
