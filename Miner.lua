@@ -127,31 +127,31 @@ function continue()
 end
 
 function mine()
-    turtle.dig
-    while turtle.detect do
-        turtle.dig
+    turtle.dig()
+    while turtle.detect() do
+        turtle.dig()
     end
     foward()
-    turtle.digUp
-    turtle.digDown
+    turtle.digUp()
+    turtle.digDown()
     turnR()
-    turtle.dig
-    while turtle.detect do
-        turtle.dig
+    turtle.dig()
+    while turtle.detect() do
+        turtle.dig()
     end
-    turtle.digUp
-    turtle.digDown
+    turtle.digUp()
+    turtle.digDown()
     turnL()
     turnL()
     foward()
     forward()
-    turtle.dig
-    while turtle.detect do
-        turtle.dig
+    turtle.dig()
+    while turtle.detect() do
+        turtle.dig()
     end
 
-    turtle.digUp
-    turtle.digDown
+    turtle.digUp()
+    turtle.digDown()
 end
 
 
