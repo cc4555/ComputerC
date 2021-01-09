@@ -128,20 +128,16 @@ end
 
 function mine()
     turtle.dig
-    if turtle.detect == true then
-        while turtle.detect == true do
-            turtle.dig
-        end
+    while turtle.detect == true do
+        turtle.dig
     end
     foward()
     turtle.digUp
     turtle.digDown
     turnR()
     turtle.dig
-    if turtle.detect == true then
-        while turtle.detect == true do
-            turtle.dig
-        end
+    while turtle.detect == true do
+        turtle.dig
     end
     turtle.digUp
     turtle.digDown
