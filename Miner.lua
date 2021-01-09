@@ -109,7 +109,9 @@ function goMine()
         turnR()
         while zPos ~= mineZ do
             forward()
-            setLocation()
+            if zPos == mineZ then
+                break;
+            end
         end
         
         setLocation()
