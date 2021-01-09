@@ -111,13 +111,15 @@ function goMine()
 
     if zPos ~= mineZ then
         turnR()
-        while zPos == mineZ do
+        while zPos ~= mineZ do
             forward()
-            pos()
+            print(zPos)
+            if zPos == mineZ then
+                break
         end
         
         setLocation()
-
+        turnL()
         while xPos ~= mineX do
             forward()
         end
