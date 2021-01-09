@@ -110,6 +110,16 @@ function up()
     end
 end
 
+function down()
+    turtle.down()
+    if cal == true then
+        yPos = yPos - 1
+    else
+        print("Not Calibrated.")
+        print("Calibrating")
+        setLocation()
+    end
+
 function goMine()
     print("Going to the mine.")
 
