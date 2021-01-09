@@ -135,5 +135,9 @@ while true do
         goMine()
     elseif sInput == "face" then
         face()
+    elseif sInput == "turnR" then
+        turnR()
+    elseif sInput == "turnL" then
+        turnL()
     end
 end
