@@ -143,7 +143,7 @@ function goMine()
         setLocation()
         turnL()
         amount = xPos - mineX
-        amount = amount - amount - amount
+        amount = amount - amount + amount
         for i=0, amount do
             forward()
         end
