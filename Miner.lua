@@ -224,7 +224,7 @@ function goMine()
 
         print("Which side of the mine are you going into id#"..id)
         setLocation()
-        if id==1 then
+        if id,id,id ~= 2,3,4 then
             print("Side 1")
             amount = xPos - cPosX
             for i=1, amount do
