@@ -161,7 +161,7 @@ function goMine()
         
         setLocation()
 
-        amount = xPos - cPosx
+        amount = xPos - cPosX
         for i=1, amount do
             forward()
         end
