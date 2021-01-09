@@ -6,6 +6,8 @@ mineX = -1690
 mineY = 12
 mineZ = 4739
 
+cPosX = -1750
+
 leftOffX = nil
 leftOffY = nil
 leftOffZ = nil
@@ -121,6 +123,9 @@ function down()
     end
 end
 
+function continue()
+
+
 function goMine()
     print("Going to the mine.")
 
@@ -153,6 +158,13 @@ function goMine()
             down()
         end
         
+        setLocation()
+
+        amount = xPos - cPosx
+        for i=1, amount do
+            forward()
+        end
+
     end
 end
 
