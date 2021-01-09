@@ -6,7 +6,7 @@ mineX = -1690
 mineY = 12
 mineZ = 4739
 
-local cPosX = -1751
+local cPosX = -1755
 
 leftOffX = nil
 leftOffY = nil
@@ -146,6 +146,10 @@ function mine()
     forward()
     turtle.digUp()
     turtle.digDown()
+    turnR()
+    turnR()
+    forward()
+    turnL()
 end
 
 
