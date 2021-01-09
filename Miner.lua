@@ -131,13 +131,16 @@ function goMine()
         
         setLocation()
         turnL()
-        while xPos ~= mineX do
+        amount = xPos - mineX
+        amount = amount - amount - amount
+        for i=0, amount do
             forward()
         end
         
         setLocation()
 
-        while yPos ~= mineY do
+        amount = yPos - mineY
+        for i=0, amount do
             down()
         end
     end
