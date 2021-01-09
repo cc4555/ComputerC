@@ -21,7 +21,7 @@ function setLocation()
     xPos, yPos, zPos = gps.locate()
 end
 
-function face()
+function facing()
     print("your facing" ..face)
 end
 
@@ -134,7 +134,7 @@ while true do
     elseif sInput == "goMine" then
         goMine()
     elseif sInput == "face" then
-        face()
+        facing()
     elseif sInput == "turnR" then
         turnR()
     elseif sInput == "turnL" then
