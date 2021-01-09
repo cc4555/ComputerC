@@ -200,7 +200,7 @@ function goMine()
 
     if zPos < mineZ then
         turnL()
-        amount = zPos - mineZ
+        amount = mineZ - zPos
         for i=1, amount do
             forward()
         end
