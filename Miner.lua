@@ -9,6 +9,8 @@ mineZ = 4739
 local cPosX = -1755
 local cPosZ = 4752
 
+local id = 1
+
 leftOffX = nil
 leftOffY = nil
 leftOffZ = nil
