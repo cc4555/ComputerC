@@ -15,3 +15,5 @@ while true do
         elseif sInput == "4" then
             rednet.broadcast(231, "calibrate")
         end
+    end
+end
