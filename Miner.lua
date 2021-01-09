@@ -107,7 +107,6 @@ function goMine()
 
     if zPos ~= mineZ then
         turnR()
-        print(face())
         while zPos ~= mineZ do
             forward()
             print("Moving to Z")
