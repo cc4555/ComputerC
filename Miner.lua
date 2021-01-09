@@ -124,6 +124,7 @@ function down()
 end
 
 function continue()
+end
 
 
 function goMine()
