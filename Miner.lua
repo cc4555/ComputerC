@@ -220,5 +220,7 @@ while true do
         back()
     elseif sInput == "pos" then
         pos()
+    elseif sInput == "mine" then
+        mine()
     end
 end
