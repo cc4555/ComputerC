@@ -17,8 +17,7 @@ leftOffZ = nil
 
 function calibrate()
     print("What is the ID of this turtle?")
-    sInput = read()
-    id = sInput
+    id = sInput = read()
     print("Calibrating")
     xPos, yPos, zPos = gps.locate()
     print("Finished")
