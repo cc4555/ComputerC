@@ -184,7 +184,7 @@ function goMine()
         end
 
         amount = yPos - mineY
-        for i=1, amount-1 do
+        for i=2, amount do
             down()
         end
         
@@ -202,12 +202,14 @@ function goMine()
     end
 
     if zPos < mineZ then
+        print("You are on the right side of the mine")
         turnL()
         amount = mineZ - zPos
         for i=1, amount do
             forward()
         end
 
+        print("You are moving to the mine")
         setLocation()
         turnR()
         amount = xPos - mineX
@@ -215,13 +217,16 @@ function goMine()
             forward()
         end
 
+        print("You are now moving down into the mine")
         amount = yPos - mineY
         for i=1, amount-1 do
             down()
         end
 
+        print("Which side of the mine are you going into")
         setLocation()
         if id == 1 then
+            print("Side 1")
             amount = xPos - cPosX
             for i=1, amount do
                 forward()
@@ -231,6 +236,7 @@ function goMine()
                 mine()
             end
         elseif id == 2 then
+            print("Side 2")
             turnR()
             amount = zPos - cPosZ
             for i=1, amount do
@@ -241,6 +247,7 @@ function goMine()
                 mine()
             end
         elseif id == 3 then
+            print("Side 3")
             turnR()
             turnR()
             amount = xPos + cPosX
@@ -252,6 +259,7 @@ function goMine()
                 mine()
             end
         elseif id == 4 then
+            print("Side 4")
             turnL()
             amount = cPosZ - zPos
             for i=1, amount do
