@@ -1,4 +1,4 @@
-Local xPos, yPos, zPos = nil
+local xPos, yPos, zPos = nil
 face = 1 
 cal = false
 sInput = nil
