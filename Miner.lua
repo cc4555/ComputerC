@@ -123,14 +123,10 @@ function goMine()
 
     if zPos ~= mineZ then
         turnR()
-        while zPos ~= mineZ do
+        amount = zPos - mineZ
+        for i=0, amount do
             forward()
             print(zPos)
-            
-            if zPos == mineZ then
-                break
-            end
-
         end
         
         setLocation()
