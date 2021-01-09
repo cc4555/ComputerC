@@ -224,7 +224,7 @@ function goMine()
 
         print("Which side of the mine are you going into id#"..id)
         setLocation()
-        if id ~= 4 then
+        if id == 4 then
             print("Side 4")
             turnL()
             amount = cPosZ - zPos
