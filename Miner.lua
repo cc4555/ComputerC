@@ -1,5 +1,5 @@
 local xPos, yPos, zPos = nil
-face = 1 
+local face = 1 
 cal = false
 sInput = nil
 mineX = -1690
