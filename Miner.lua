@@ -141,5 +141,9 @@ while true do
         turnR()
     elseif sInput == "turnL" then
         turnL()
+    elseif sInput == "forward" then
+        forward()
+    elseif sInput == "back" then
+        back()
     end
 end
