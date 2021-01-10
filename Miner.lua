@@ -192,7 +192,7 @@ function goMine() -- tells the turtle to move from the base position to the mine
         turnL()
         amount = xPos - mineX
         amount = amount - amount + amount
-        for i=1, amount do
+        for i=1, amount-1 do
             forward()
         end
 
