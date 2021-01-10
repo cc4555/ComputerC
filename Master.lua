@@ -31,6 +31,6 @@ while true do
 
     if sInput == "goMine" then
         rednet.send(226, "goMine")
-
+    end
     
 end
