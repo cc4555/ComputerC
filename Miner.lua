@@ -22,7 +22,7 @@ function calibrate() -- Calibrate the X Y and Z Position of the turtle
     print("received a message from master telling me to calibrate sender #"..senderId)
     sleep(1)
     rednet.send(253, "What is the ID of this turtle?")
-    senderId, message, protocol = rednet.receive(10) --receives the id of the turtle
+    senderId, message, protocol = rednet.receive() --receives the id of the turtle
     print(message)
     id = message
     print("The id of this turtle is "..id)
