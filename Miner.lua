@@ -53,7 +53,7 @@ function turnL() -- turns the turtle left and changes the facing variable
         turtle.turnLeft()
     elseif face == 2 then
         face = 3
-        turle.turnLeft()
+        turtle.turnLeft()
     elseif face == 3 then
         face = 4
         turtle.turnLeft()
