@@ -14,6 +14,7 @@ while true do
             senderId, message, protocol = rednet.receive(10)
             print(message)
             sInput = read()
+            print(sInput)
             rednet.send(226, sInput) -- sends the id of the turtle
             senderId, message, protocol = rednet.receive(10)
             print(messge)
