@@ -19,6 +19,7 @@ leftOffZ = nil
 rednet.open("right")
 
 function calibrate() -- Calibrate the X Y and Z Position of the turtle
+    print("received a message from master telling me to calibrate"..senderId)
     rednet.send(senderId, "What is the ID of this turtle?")
     id = rednet.receive()
     rednet.send(senderId, "Calibrating to id "..id)
