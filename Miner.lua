@@ -281,15 +281,15 @@ function goMine()
     end
 end
 
-
-while true do
-
     senderId, message, protocol = rednet.receive(10)
 
     if message == calibrate then
         calibrate()
-        rednet.send(senderId, "Calibrated")
     end
+
+while true do
+
+    
 
     if sInput == "calibrate" then
         calibrate()
