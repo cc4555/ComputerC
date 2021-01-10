@@ -283,7 +283,8 @@ end
 
     senderId, message, protocol = rednet.receive(10)
 
-    if message == calibrate then
+
+    if message == "calibrate" then
         calibrate()
     end
 
