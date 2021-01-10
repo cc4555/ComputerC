@@ -8,13 +8,13 @@ while true do
         sInput = read()
         if sInput == "1" then
             print("broadcasting to computer 226 (turtle 1)")
-            rednet.broadcast(226, "calibrate")
+            rednet.send(226, "calibrate")
         elseif sInput == "2" then
-            rednet.broadcast(227, "calibrate")
+            rednet.send(227, "calibrate")
         elseif sInput == "3" then
-            rednet.broadcast(228, "calibrate")
+            rednet.send(228, "calibrate")
         elseif sInput == "4" then
-            rednet.broadcast(231, "calibrate")
+            rednet.send(231, "calibrate")
         end
     end
 end
