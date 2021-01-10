@@ -10,7 +10,7 @@ local cPosX = -1755
 local cPosZ = 4752
 
 local id = nil
-local senderId, message, protocol = nil
+local senderId, message, protocol = 253,nil,nil
 
 leftOffX = nil
 leftOffY = nil
