@@ -18,28 +18,28 @@ leftOffZ = nil
 
 rednet.open("right")
 
-function calibrate()
-    print("What is the ID of this turtle?")
-    id = read()
-    print("Calibrating to id "..id)
+function calibrate() -- Calibrate the X Y and Z Position of the turtle
+    rednet.send(senderId, "What is the ID of this turtle?")
+    id = rednet.receive()
+    rednet.send(senderId, "Calibrating to id "..id)
     xPos, yPos, zPos = gps.locate()
-    print("Finished")
+    rednet.send(senderId, "Finished")
     cal = true
 end
 
-function setLocation()
+function setLocation() -- set the location if position is some how messed up
     xPos, yPos, zPos = gps.locate()
 end
 
-function pos()
+function pos() -- print out the position to check where the turtle is
     print("X:" ..xPos.. "  Y:" ..yPos.. "  Z:" ..zPos)
 end
 
-function facing()
+function facing() -- print out where the turtle is facing
     print("your facing" ..face)
 end
 
-function turnL()
+function turnL() -- turns the turtle left and changes the facing variable
     if face == 0 then
         face = 1
         turtle.turnLeft()
@@ -55,7 +55,7 @@ function turnL()
     end
 end
 
-function turnR()
+function turnR() -- turns the turtle right and changed the facing variable
     if face == 0 then
         face = 3
         turtle.turnRight()
@@ -71,7 +71,7 @@ function turnR()
     end
 end
 
-function forward()
+function forward() -- moves the turtle forward and changes the Z or the X position
     turtle.forward()
     if cal == true then
         if face == 0 then
@@ -90,7 +90,7 @@ function forward()
     end
 end
 
-function back()
+function back() -- moves the turtle backwards and changes the Z or the X position
     turtle.back()
     if cal == true then
         if face == 0 then
@@ -109,7 +109,7 @@ function back()
     end
 end
 
-function up()
+function up() -- moves the turtle up by 1 and changes the Y position
     turtle.up()
     if cal == true then
         yPos = yPos + 1
@@ -120,7 +120,7 @@ function up()
     end
 end
 
-function down()
+function down() -- moves the turtle down by 1 and changes the Y position
     turtle.down()
     if cal == true then
         yPos = yPos - 1
@@ -131,7 +131,7 @@ function down()
     end
 end
 
-function mine()
+function mine() -- tells the turtle to start mining in a 3 by 3
     turtle.dig()
     while turtle.detect() do
         turtle.dig()
@@ -164,7 +164,7 @@ function mine()
 end
 
 
-function goMine()
+function goMine() -- tells the turtle to move from the base position to the mine to start mining
     print("Going to the mine.")
 
     if cal == false then
@@ -281,7 +281,7 @@ function goMine()
     end
 end
 
-    senderId, message, protocol = rednet.receive(10)
+    senderId, message, protocol = rednet.receive()
 
 
     if message == "calibrate" then
