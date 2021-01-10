@@ -13,6 +13,10 @@ while true do
             rednet.send(226, "calibrate") -- sends the turtle the calibrate command
             senderId, message, protocol = rednet.receive(10)
             print(message)
+            sInput = read()
+            rednet.send(226, sInput) -- sends the id of the turtle
+            senderId, message, protocol = rednet.receive(10)
+            print(messge)
 
         elseif sInput == "2" then
             rednet.send(227, "calibrate")
