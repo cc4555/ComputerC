@@ -20,8 +20,8 @@ rednet.open("right")
 
 function calibrate() -- Calibrate the X Y and Z Position of the turtle
     print("received a message from master telling me to calibrate"..senderId)
-    rednet.send(senderId, "What is the ID of this turtle?")
-    id = rednet.receive()
+    rednet.send(253, "What is the ID of this turtle?")
+    id = rednet.receive(10)
     rednet.send(senderId, "Calibrating to id "..id)
     xPos, yPos, zPos = gps.locate()
     rednet.send(senderId, "Finished")
