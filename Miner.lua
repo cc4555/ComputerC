@@ -281,7 +281,7 @@ function goMine() -- tells the turtle to move from the base position to the mine
     end
 end
 
-    senderId, message, protocol = rednet.receive()
+    senderId, message, protocol = rednet.receive(10)
 
 
     if message == "calibrate" then
