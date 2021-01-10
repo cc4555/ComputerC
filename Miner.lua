@@ -15,7 +15,7 @@ leftOffX = nil
 leftOffY = nil
 leftOffZ = nil
 
-rednet.open()
+rednet.open("right")
 
 function calibrate()
     print("What is the ID of this turtle?")
