@@ -23,6 +23,7 @@ function calibrate() -- Calibrate the X Y and Z Position of the turtle
     sleep(1)
     rednet.send(253, "What is the ID of this turtle?")
     senderId, message, protocol = rednet.receive(10) --receives the id of the turtle
+    print(message)
     id = message
     print("The id of this turtle is "..id)
     xPos, yPos, zPos = gps.locate() -- sets the location of where the turtle is from startup
