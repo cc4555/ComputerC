@@ -10,6 +10,7 @@ local cPosX = -1755
 local cPosZ = 4752
 
 local id = nil
+local senderId, message, protocol = nil
 
 leftOffX = nil
 leftOffY = nil
@@ -280,10 +281,10 @@ function goMine()
     end
 end
 
-local senderId, message, protocol = rednet.receive()
-print(message)
 
 while true do
+
+    senderId, message, protocol = rednet.receive(10)
 
     if message == calibrate then
         calibrate()
