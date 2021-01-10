@@ -19,12 +19,12 @@ leftOffZ = nil
 rednet.open("right")
 
 function calibrate() -- Calibrate the X Y and Z Position of the turtle
-    print("received a message from master telling me to calibrate"..senderId)
+    print("received a message from master telling me to calibrate sender #"..senderId)
     rednet.send(253, "What is the ID of this turtle?")
-    id = rednet.receive(10)
-    rednet.send(senderId, "Calibrating to id "..id)
+    senderId, message, protocol = rednet.receive(10)
+    id = message
     xPos, yPos, zPos = gps.locate()
-    rednet.send(senderId, "Finished")
+    rednet.send(253, "Finished")
     cal = true
 end
 
@@ -289,27 +289,3 @@ end
         calibrate()
     end
 
-while true do
-
-    
-
-    if sInput == "calibrate" then
-        calibrate()
-    elseif sInput == "goMine" then
-        goMine()
-    elseif sInput == "face" then
-        facing()
-    elseif sInput == "turnR" then
-        turnR()
-    elseif sInput == "turnL" then
-        turnL()
-    elseif sInput == "forward" then
-        forward()
-    elseif sInput == "back" then
-        back()
-    elseif sInput == "pos" then
-        pos()
-    elseif sInput == "mine" then
-        mine()
-    end
-end
