@@ -285,28 +285,3 @@ end
         calibrate()
     end
 
-    
-while true do
-
-    
-
-    if sInput == "calibrate" then
-        calibrate()
-    elseif sInput == "goMine" then
-        goMine()
-    elseif sInput == "face" then
-        facing()
-    elseif sInput == "turnR" then
-        turnR()
-    elseif sInput == "turnL" then
-        turnL()
-    elseif sInput == "forward" then
-        forward()
-    elseif sInput == "back" then
-        back()
-    elseif sInput == "pos" then
-        pos()
-    elseif sInput == "mine" then
-        mine()
-    end
-end
