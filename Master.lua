@@ -11,13 +11,12 @@ while true do
         if sInput == "1" then
             print("broadcasting to computer 226 (turtle 1)")
             rednet.send(226, "calibrate") -- sends the turtle the calibrate command
-            senderId, message, protocol = rednet.receive(10)
+            senderId, message, protocol = rednet.receive()
             print(message)
             sInput = read()
-            print(sInput.."FUCK")
             rednet.send(226, sInput) -- sends the id of the turtle
-            senderId, message, protocol = rednet.receive(10)
-            print(messge)
+            senderId, message, protocol = rednet.receive()
+            print(message)
 
         elseif sInput == "2" then
             rednet.send(227, "calibrate")
