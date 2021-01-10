@@ -226,7 +226,7 @@ function goMine() -- tells the turtle to move from the base position to the mine
         setLocation()
         turnR()
         amount = xPos - mineX
-        for i=1, amount do
+        for i=0, amount do
             forward()
         end
 
