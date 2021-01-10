@@ -10,7 +10,6 @@ while true do
         sInput = read()
         if sInput == "1" then
             print("broadcasting to computer 226 (turtle 1)")
-            senderId, message, protocol = rednet.receive(10)
             rednet.send(226, "calibrate") -- sends the turtle the calibrate command
             rednet.receive(10)
             rednet.send(226, sInput)
