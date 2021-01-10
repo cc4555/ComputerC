@@ -280,8 +280,15 @@ function goMine()
     end
 end
 
+local senderId, message, protocol = rednet.receive()
+print(message)
+
 while true do
-    sInput = rednet.receive()
+
+    if message == calibrate then
+        calibrate()
+        rednet.send(senderId, "Calibrated")
+    end
 
     if sInput == "calibrate" then
         calibrate()
