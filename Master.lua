@@ -27,5 +27,10 @@ while true do
         end
     end
 
+    sInput = read()
+
+    if sInput == "goMine" then
+        rednet.send(226, "goMine")
+
     
 end
