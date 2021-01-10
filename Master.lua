@@ -7,6 +7,7 @@ while true do
         print("What computer would you like to calibrate")
         sInput = read()
         if sInput == "1" then
+            print("broadcasting to computer 226 (turtle 1)")
             rednet.broadcast(226, "calibrate")
         elseif sInput == "2" then
             rednet.broadcast(227, "calibrate")
