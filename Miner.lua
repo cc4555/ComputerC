@@ -281,7 +281,7 @@ function goMine()
 end
 
 while true do
-    sInput = read()
+    sInput = rednet.receive()
 
     if sInput == "calibrate" then
         calibrate()
