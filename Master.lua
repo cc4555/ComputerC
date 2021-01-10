@@ -1,4 +1,4 @@
-rednet.open()
+rednet.open("right")
 
 while true do 
     sInput = read()
