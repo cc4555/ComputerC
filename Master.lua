@@ -1,3 +1,5 @@
+local senderId, message, protocol = nil
+
 rednet.open("right")
 
 while true do 
@@ -17,4 +19,7 @@ while true do
             rednet.send(231, "calibrate")
         end
     end
+
+    senderId, message, protocol = rednet.receive(10)
+    senderId, message, protocol = rednet.receive(10)
 end
