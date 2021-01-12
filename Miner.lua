@@ -246,7 +246,7 @@ function goMine() -- tells the turle to move from the base position to the mine 
     end
 end
 
-senderId, message, protocol = rednet.receive() -- wait for the message to be sent from the master computer
+senderId, message, protocol = rednet.receive(10) -- wait for the message to be sent from the master computer
 
 if message == "goMine" then
     goMine()
