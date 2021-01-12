@@ -173,8 +173,7 @@ function goMine() -- tells the turle to move from the base position to the mine 
     print("Going to the mine.")
 
     if cal == false then
-        print("Please calibrate the turtle")
-        rednet.send("Please calibrate the turtle")
+        calibrate()
     end
 
     up()
