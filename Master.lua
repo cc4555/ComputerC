@@ -25,11 +25,7 @@ while true do
         elseif sInput == "4" then
             rednet.send(231, "calibrate")
         end
-    end
-
-    sInput = read()
-
-    if sInput == "goMine" then
+    elseif sInput == "goMine" then
         rednet.send(226, "goMine")
         rednet.receive()
     end
